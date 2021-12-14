@@ -286,16 +286,19 @@
 		background-color: rgba(255, 255, 255, 0.8);
 		@extend %bgcontain;
 		background-size: 19px 32px;
+		border: 1px solid #c1c1c1;
 		z-index: 1;
 
 		&.slick-prev {
 			background-image: url('../images/icons/arrow-left.svg');
 			left: 60px;
+			transition: background-image 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
 		}
 
 		&.slick-next {
 			background-image: url('../images/icons/arrow-right.svg');
 			right: 60px;
+			transition: background-image 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
 		}
 
 		&:focus {
