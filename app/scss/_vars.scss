@@ -1,0 +1,34 @@
+// Шрифты==================================================
+$OpenSans: 'Open Sans', sans-serif;
+$Ruda: 'Ruda', sans-serif;
+
+
+
+
+
+// Цвета==================================================
+$colorMain:#505050 ;
+$colorTitle: #121212;
+$colorAccent:#63A60E;
+$colorBg: #31352B;
+$colorRed: #CF3E3B;
+$colorOrange: #FF7A00;
+$colorYellow: #FFB800;
+
+
+
+
+
+
+
+// Мексины==================================================
+%bgcontain {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+%bgcover {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
