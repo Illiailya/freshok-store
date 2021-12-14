@@ -1,17 +1,20 @@
 html,
 body {
 	height: 100%;
+	min-height: 100%;
 }
 
 body {
 	font-family: $OpenSans;
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 140%;
 	background-color: #fff;
 	color: #000;
+	letter-spacing: 0.03em;
 }
 
-.container {
+.main-container {
 	max-width: 1320px;
 	margin: 0 auto;
 	padding: 0 15px;
@@ -26,4 +29,33 @@ body {
 	overflow: hidden;
 	clip: rect(0, 0, 0, 0);
 	border: 0;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	flex: 1 1 auto;
+}
+
+.logo {
+	display: inline-block;
+}
+
+// ===================ICONS======================
+.icon-truck {
+	display: inline-block;
+	width: 32px;
+	height: 22px;
+	fill: #fff;
+}
+
+.icon-phone {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	fill: #fff;
 }
