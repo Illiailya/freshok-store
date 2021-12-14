@@ -15,6 +15,7 @@
 	<div class="wrapper">
 
 		<header class="header">
+			<h1 class="sr-only">Магазин свежих и топовых продуктов</h1>
 
 			<div class="header__top header-top">
 				<div class='header-top__container main-container'>
@@ -86,11 +87,11 @@
 						</form>
 
 						<div class="header-bot__menu">
-							<a class="header-bot__link header-bot__link--user" href="#"></a>
-							<button class="header-bot__link header-bot__link--heart" type="button">
+							<a class="header-bot__link header-bot__link--user" href="#" aria-label="иконка юзера, панель юзера"></a>
+							<button class="header-bot__link header-bot__link--heart" type="button" aria-label="иконка сердце, избранные товары">
 								<span class="header-bot__link-counter">12</span>
 							</button>
-							<button class="header-bot__link header-bot__link--cart" type="button">
+							<button class="header-bot__link header-bot__link--cart" type="button" aria-label="иконка корзины, панель товаров в корзине">
 								<span class="header-bot__link-counter">12</span>
 							</button>
 						</div>
@@ -106,20 +107,74 @@
 		<main class="content">
 
 			<section class="top-slider">
+				<h2 class="sr-only">слайдер топ</h2>
+				<ul class="top-slider__inner">
 
+					<li class="top-slider__inner-item" style="background-image: url('images/top-slider/slide1.jpg') ;">
+						<div class='top-slider__container main-container'>
+							<div class="top-slider__content">
+								<h3 class="top-slider__content-title">
+									СВЕЖАЧОК ВАМ в ХАТУ
+									<span class="top-slider__content-subtitle">
+										Скидка -50%
+									</span>
+								</h3>
+								<div class="top-slider__content-text">
+									<p>
+										Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+									</p>
+								</div>
+								<button class="top-slider__content-btn btn">
+									Купить сейчас
+								</button>
+							</div>
+						</div>
+					</li>
+
+					<li class="top-slider__inner-item" style="background-image: url('images/top-slider/slide2.jpg') ;">
+						<div class='top-slider__container main-container'>
+							<div class="top-slider__content">
+								<h3 class="top-slider__content-title">
+									НАКРУТИ СЕБЕ ТОМАТОВ
+									<span class="top-slider__content-subtitle">
+										АКЦИЯ: 3 кг по цене 1
+									</span>
+								</h3>
+								<div class="top-slider__content-text">
+									<p>
+										Только с 12 по 15 июля скидка на домашние помидорчики
+									</p>
+								</div>
+								<button class="top-slider__content-btn btn">
+									Купить сейчас
+								</button>
+							</div>
+						</div>
+					</li>
+
+					<li class="top-slider__inner-item" style="background-image: url('images/top-slider/slide3.jpg') ;">
+						<div class='top-slider__container main-container'>
+							<div class="top-slider__content">
+								<h3 class="top-slider__content-title">
+									Пусть остальные позеленеют от зависти
+									<span class="top-slider__content-subtitle">
+										Распродажа зелени
+									</span>
+								</h3>
+								<button class="top-slider__content-btn btn">
+									Купить сейчас
+								</button>
+							</div>
+						</div>
+					</li>
+
+				</ul>
 			</section>
 
 		</main>
 
-
-
-
-		<footer class="footer">
-			Footer
-		</footer>
+		<footer class="footer">Footer</footer>
 	</div>
-
-
 
 	<script src="js/main.min.js"></script>
 </body>
