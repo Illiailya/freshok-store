@@ -8,5 +8,5 @@ $(function(){
 		});	
 
 	});
-
+	var mixer = mixitup('.top__inner');
 });

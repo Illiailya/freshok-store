@@ -8,9 +8,9 @@ body {
 	font-family: $OpenSans;
 	font-weight: 400;
 	font-size: 16px;
-	line-height: 140%;
+	line-height: 1.4;
 	background-color: #fff;
-	color: #000;
+	color: $colorMain;
 	letter-spacing: 0.03em;
 }
 
@@ -43,6 +43,16 @@ body {
 
 .logo {
 	display: inline-block;
+}
+
+.title {
+	font-family: $Ruda;
+	font-size: 32px;
+	line-height: 1.4;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: $colorTitle;
+	margin-bottom: 30px;
 }
 
 .btn {
@@ -83,3 +93,27 @@ body {
 	height: 22px;
 	fill: #fff;
 }
+
+.icon-heart {
+	display: inline-block;
+	width: 32px;
+	height: 28px;
+	fill: #c1c1c1;
+	transition: fill 0.4s ease;
+}
+
+.icon-cart {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	fill: #fff;
+	transition: fill 0.4s ease;
+}
+
+.icon-search {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	fill: $colorAccent;
+}
+
