@@ -79,6 +79,64 @@ body {
 	}
 }
 
+.btn-mixitup {
+	font-size: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding-bottom: 5px;
+	position: relative;
+	overflow-x: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		background-color: #E0EDCF;
+		transform: translateX(-100%);
+		transition: transform 0.3s ease;
+	}
+
+	&:hover::before {
+		transform: translateX(0)
+	}
+
+	&:focus,
+	&:active {
+		&::before {
+			transform: translateX(0)
+		}
+	}
+}
+
+.link-more {
+	display: inline-block;
+	padding: 12px 24px;
+	border-radius: 6px;
+	background-color: #fff;
+	border: 1px solid $colorAccent;
+	color: $colorAccent;
+	font-size: 18px;
+	line-height: 1.3;
+	transition: box-shadow 0.4s ease, background-color 0.4s ease, color 0.4s ease;
+
+	&:focus {
+		box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
+	}
+
+	&:hover {
+		background-color: #EFF6E7;
+		box-shadow: none;
+	}
+
+	&:active {
+		box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
+		color: rgba(99, 166, 14, 0.5);
+	}
+}
+
 // ===================ICONS-SPRITE======================
 .icon-truck {
 	display: inline-block;
