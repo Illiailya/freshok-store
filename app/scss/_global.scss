@@ -35,6 +35,7 @@ body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 }
 
 .content {
@@ -137,6 +138,189 @@ body {
 	}
 }
 
+.breadcrambs {
+	font-size: 14px;
+	line-height: 1.2;
+	background-color: #F6F6F6;
+	margin-bottom: 48px;
+
+	&__inner {
+		padding: 24px 0;
+		display: flex;
+		align-items: center;
+	}
+
+	&__item {
+		position: relative;
+		margin-right: 16px;
+
+		&:first-child {
+			&:before {
+				display: none;
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: -16px;
+			bottom: 1px;
+			width: 15px;
+			height: 18px;
+			background-repeat: no-repeat;
+			background-size: initial;
+			background-position: center;
+			background-image: url('../images/catalol-page/chevron.svg');
+			transform: rotate(90deg) scale(0.7);
+		}
+	}
+
+}
+
+// ====================RANGE_SLIDER=====================
+.irs--flat {
+	.irs-single {
+		display: none;
+	}
+
+	.irs-line {
+		top: 73px;
+		background-color: $colorAccent;
+		height: 2px;
+		background-color: #c4c4c4;
+	}
+
+	.irs-min,
+	.irs-max {
+		// visibility: hidden !important;
+		display: none;
+	}
+
+	.irs-from,
+	.irs-to {
+		position: absolute;
+		display: flex;
+		width: 80px;
+		height: 40px;
+		justify-content: center;
+		align-items: center;
+		font-size: 16px;
+		line-height: 1;
+		color: $colorMain;
+		background-color: #F6F6F6;
+		border: 1px solid #C1C1C1;
+		border-radius: 3px;
+		visibility: visible !important;
+
+		&::before {
+			position: absolute;
+			left: -21px;
+			display: inline-block;
+			bottom: 10px;
+			width: 18px;
+			height: 19px;
+			margin-left: 0;
+			overflow: visible;
+			border: none;
+			font-size: 16px;
+			line-height: 1.2;
+			font-family: $Ruda;
+			color: #C1C1C1;
+		}
+
+		&::after {
+			position: absolute;
+			right: -14px;
+			color: #C1C1C1;
+		}
+	}
+
+	.irs-from {
+		left: 42px !important;
+
+		&::before {
+			content: 'от';
+		}
+
+		&::after {
+			content: '₽';
+		}
+	}
+
+	.irs-to {
+		left: 186px !important;
+
+		&::before {
+			content: 'до';
+		}
+
+		&::after {
+			content: '₽';
+		}
+	}
+
+	.irs-bar {
+		top: 73px;
+		height: 2px;
+		background-color: $colorAccent;
+	}
+
+	.irs-handle {
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		background-color: $colorAccent;
+		border-radius: 50%;
+		top: 65px;
+
+		i:first-child {
+			display: none;
+		}
+	}
+}
+
+// ====================S=Select-style=====================
+.jq-selectbox__select {
+	background: #fff;
+	padding: 15px 42px 15px 11px;
+	height: auto;
+	box-shadow: none;
+	border-radius: 3px;
+	border: 1px solid #C1C1C1;
+}
+
+.jq-selectbox__trigger {
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&-arrow {
+		position: static;
+		border: none;
+		width: 12px;
+		height: 10px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: initial;
+		background-image: url('../images/catalol-page/chevron.svg');
+		transform: rotate(-180deg);
+	}
+}
+
+.jq-selectbox__select-text {
+	font-size: 14px;
+	line-height: 1.2;
+	color: $colorMain;
+}
+
+.jq-selectbox__dropdown {
+	top: 46px;
+}
+
+
+
+
 // ===================ICONS-SPRITE======================
 .icon-truck {
 	display: inline-block;
@@ -175,3 +359,34 @@ body {
 	fill: $colorAccent;
 }
 
+.icon-btn-list {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	fill: #c1c1c1;
+	transition: fill 0.4s ease;
+}
+
+.icon-btn-grid {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	fill: #c1c1c1;
+	transition: fill 0.4s ease;
+}
+
+.icon-chevron {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	fill: #C1C1C1;
+
+	&--left {
+		transform: rotate(-90deg);
+	}
+
+	&--right {
+		transform: rotate(90deg);
+		fill: #505050;
+	}
+}

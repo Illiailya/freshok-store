@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Фрешок</title>
+	<link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<header class="header">
+			<h1 class="sr-only">Магазин свежих и топовых продуктов</h1>
+
+			<div class="header__top header-top">
+				<div class='header-top__container main-container'>
+					<div class="header-top__inner">
+
+						<ul class="header-top__info">
+							<li class="header-top__info-item">
+								<a class="header-top__link header-top__link--adress" href="#">
+									<svg class="icon-truck">
+										<use xlink:href="sprite.svg#truck"></use>
+									</svg>
+									Адрес и время доставки
+								</a>
+							</li>
+
+							<li class="header-top__info-item">
+								<a class="header-top__link header-top__link--phone" href="#">
+									<svg class="icon-phone">
+										<use xlink:href="sprite.svg#phone"></use>
+									</svg>
+									Горячая линия 24/7
+								</a>
+							</li>
+
+						</ul>
+						<ul class="header-top__menu">
+							<li class="header-top__menu-item">
+								<a class="header-top__link" href="#">
+									Доставка
+								</a>
+							</li>
+
+							<li class="header-top__menu-item">
+								<a class="header-top__link" href="#">
+									О нас
+								</a>
+							</li>
+
+							<li class="header-top__menu-item">
+								<a class="header-top__link" href="#">
+									Новости
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="header__bottom header-bot">
+				<div class='header-bot__container main-container'>
+					<div class="header-bot__inner">
+
+						<div class="header-bot__logo">
+							<a class="logo" href="#">
+								<img class="logo__item" src="images/icons/logo.svg" style="width: 200px; height: 60px;" alt="Логотип">
+							</a>
+						</div>
+
+						<button class="header-bot__button" type="button">
+							Каталог продуктов
+						</button>
+
+						<form class="header-bot__form" action="#">
+							<input class="header-bot__form-input" type="search" placeholder="Найти в магазине ..." required>
+							<button class="header-bot__form-btn" type="submit">
+								Поиск
+							</button>
+						</form>
+
+						<div class="header-bot__menu">
+							<a class="header-bot__link header-bot__link--user" href="#" aria-label="иконка юзера, панель юзера"></a>
+							<button class="header-bot__link header-bot__link--heart" type="button"
+								aria-label="иконка сердце, избранные товары">
+								<span class="header-bot__link-counter">12</span>
+							</button>
+							<button class="header-bot__link header-bot__link--cart" type="button"
+								aria-label="иконка корзины, панель товаров в корзине">
+								<span class="header-bot__link-counter">12</span>
+							</button>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</header>
+
+		<main class="content">
+			Content
+		</main>
+
+		<footer class="footer">
+			<div class='footer__container main-container'>
+
+				<div class="footer__top top-footer">
+
+					<div class="top-footer__head">
+						<div class="top-footer__logo">
+							<a class="logo" href="#">
+								<img class="logo__item" src="images/icons/logo.svg" style="width: 200px; height: 60px;" alt="Логотип">
+							</a>
+						</div>
+					</div>
+
+					<ul class="top-footer__inner">
+
+						<li class="top-footer__item">
+							<form class="top-footer__form footer-form" action="#">
+								<label class="footer-form__label" for="footer-input">
+									Следите за нашими акциями
+								</label>
+
+								<div class="footer-form__inner">
+									<input class="footer-form__input" type="email" id="footer-input" placeholder="email@email.com"
+										required>
+									<button class="footer-form__btn btn" type="submit">
+										Подписаться
+									</button>
+								</div>
+							</form>
+						</li>
+
+						<li class="top-footer__item">
+							<ul class="top-footer__menu footer-menu">
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="#">
+										О нас
+									</a>
+								</li>
+
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="#">
+										Контакты
+									</a>
+								</li>
+
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="#">
+										Публичная оферта
+									</a>
+								</li>
+
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="#">
+										Оплата и доставка
+									</a>
+								</li>
+
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="#">
+										Вакансии
+									</a>
+								</li>
+
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="#">
+										Акции
+									</a>
+								</li>
+
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="#">
+										Отзывы
+									</a>
+								</li>
+
+								<li class="footer-menu__item">
+									<a class="footer-menu__link" href="#">
+										Новости
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="top-footer__item">
+
+							<div class="top-footer__contacts footer-contacts">
+
+								<a class="footer-contacts__phone" href="tel:+7907288365">
+									Горячая линия +7 907 288 365
+								</a>
+								<a class="footer-contacts__adress" href="#">
+									Санкт-Петербург, ул. Ленина, 1
+								</a>
+
+								<ul class="footer-contacts__media">
+									<li class="footer-contacts__media-item">
+										<a class="footer-contacts__media-link footer-contacts__media-link--facebook" href="#"
+											aria-label="фэйсбук"></a>
+									</li>
+
+									<li class="footer-contacts__media-item">
+										<a class="footer-contacts__media-link footer-contacts__media-link--youtube" href="#"
+											aria-label="Ютуб"></a>
+									</li>
+
+									<li class="footer-contacts__media-item">
+										<a class="footer-contacts__media-link footer-contacts__media-link--telegram" href="#"
+											aria-label="телеграм"></a>
+									</li>
+
+									<li class="footer-contacts__media-item">
+										<a class="footer-contacts__media-link footer-contacts__media-link--instagram" href="#"
+											aria-label="инстаграм"></a>
+									</li>
+								</ul>
+							</div>
+
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="footer__bottom footer-bottom">
+					<span class="footer-bottom__text">
+						© 2021 ФРЕШОК
+					</span>
+
+					<div class="footer-bottom__pay">
+						<a class="footer-bottom__pay-card footer-bottom__pay-card--visa" href="#" aria-label="Виза"></a>
+						<a class="footer-bottom__pay-card footer-bottom__pay-card--master" href="#" aria-label="Мастеркард"></a>
+					</div>
+
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/mixitup.min.js"></script>
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>
