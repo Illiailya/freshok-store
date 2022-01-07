@@ -4,6 +4,7 @@
 @import 'libs';
 @import 'reset';
 @import 'global';
+@import 'catalog-page';
 
 .header-top {
 	padding: 14px 0;
@@ -285,7 +286,7 @@
 		background-color: rgba(255, 255, 255, 0.8);
 		@extend %bgcontain;
 		background-size: 19px 32px;
-		border: 1px solid #c1c1c1;
+		border: 1px solid $colorGrey;
 		z-index: 1;
 
 		&.slick-prev {
@@ -419,6 +420,10 @@
 	border-radius: 6px;
 	text-align: left;
 
+	&__wrapper {
+		display: block;
+	}
+
 	&__top {
 		padding: 12px 12px 0 12px;
 		display: flex;
@@ -430,7 +435,6 @@
 	&__news {
 		display: flex;
 		flex-direction: column;
-
 	}
 
 	&__text {
@@ -513,6 +517,59 @@
 		object-fit: cover;
 	}
 
+	&__pannel {
+		display: none;
+
+		&--vissible {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: absolute;
+			bottom: -14px;
+			left: 0;
+			width: 100%;
+			padding: 0 17px 0 18px;
+		}
+	}
+
+	&__status {
+		font-size: 10px;
+		line-height: 1;
+		font-weight: 600;
+		text-transform: uppercase;
+
+		&--available {
+			color: $colorAccent;
+		}
+
+		&--missing {
+			color: $colorGrey;
+		}
+
+		&--finishing {
+			color: $colorRed;
+		}
+	}
+
+	&__stars {
+		font-size: 14px;
+		line-height: 1;
+		font-weight: 700;
+		padding-right: 18px;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 16px;
+			height: 16px;
+			@extend %bgcover;
+			background-image: url('../images/icons/star.svg');
+		}
+	}
+
 	&__body {
 		padding: 18px;
 		display: flex;
@@ -543,7 +600,7 @@
 	}
 
 	&__old {
-		color: #c1c1c1;
+		color: $colorGrey;
 		position: relative;
 		margin-bottom: 3px;
 
@@ -554,7 +611,7 @@
 			left: 0;
 			width: 100%;
 			height: 2px;
-			background-color: #c1c1c1;
+			background-color: $colorGrey;
 			transform: rotate(-15deg);
 		}
 	}
@@ -590,7 +647,6 @@
 	&:hover {
 		box-shadow: 0 0 0 1px $colorAccent;
 	}
-
 	transition: box-shadow 0.4s ease;
 }
 
@@ -694,7 +750,7 @@
 }
 
 .promo-card {
-	box-shadow: 0 0 0 1px #C1C1C1;
+	box-shadow: 0 0 0 1px $colorGrey;
 	border-radius: 6px;
 	overflow: hidden;
 
@@ -772,7 +828,7 @@
 		}
 
 		&--ended {
-			color: #c1c1c1;
+			color: $colorGrey;
 		}
 	}
 
@@ -790,7 +846,7 @@
 
 	&__price-old {
 		font-size: 12px;
-		color: #c1c1c1;
+		color: $colorGrey;
 		position: relative;
 		margin-right: auto;
 
@@ -801,7 +857,7 @@
 			left: 0;
 			width: 100%;
 			height: 1px;
-			background-color: #c1c1c1;
+			background-color: $colorGrey;
 			transform: rotate(-15deg);
 		}
 	}
@@ -1008,7 +1064,7 @@
 		}
 
 		&::placeholder {
-			color: #C1C1C1;
+			color: $colorGrey;
 		}
 	}
 
@@ -1155,6 +1211,7 @@
 		}
 	}
 }
+
 
 
 

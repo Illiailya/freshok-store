@@ -29,6 +29,7 @@ figcaption,
 dl,
 dd {
 	margin: 0;
+	letter-spacing: inherit;
 }
 
 ul {
@@ -47,12 +48,16 @@ select {
 	font: inherit;
 	outline: inherit;
 	border: inherit;
+	letter-spacing: inherit;
+	font-size: inherit;
+	font-family: inherit;
 }
 
 a {
 	color: inherit;
 	text-decoration: none;
 	outline: inherit;
+	letter-spacing: inherit;
 }
 
 button {
