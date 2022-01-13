@@ -4,7 +4,6 @@
 @import 'libs';
 @import 'reset';
 @import 'global';
-@import 'catalog-page';
 
 .header-top {
 	padding: 14px 0;
@@ -416,7 +415,7 @@
 .card-item {
 	width: 300px;
 	height: 409px;
-	box-shadow: 0 0 0 1px rgba(17, 17, 17, 0.2);
+	border: 1px solid rgba(17, 17, 17, 0.2);
 	border-radius: 6px;
 	text-align: left;
 
@@ -645,9 +644,10 @@
 	}
 
 	&:hover {
-		box-shadow: 0 0 0 1px $colorAccent;
+		border: 1px solid $colorAccent;
 	}
-	transition: box-shadow 0.4s ease;
+
+	transition: border 0.4s ease;
 }
 
 .banners {
@@ -1212,7 +1212,8 @@
 	}
 }
 
-
+@import 'catalog-page';
+@import 'product-page';
 
 
 @import 'media';
