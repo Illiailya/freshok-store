@@ -1,7 +1,7 @@
 $(function () {
 	// Main Page Top-slider
 	$('.top-slider__inner').slick({
-		dots: false
+		dots: true,
 	});
 
 	// Main Page Переменные для двух mixitup
@@ -10,15 +10,29 @@ $(function () {
 
 	var config = {
 		controls: {
-			scope: 'local'
+			scope: 'local',
 		}
 	};
+	
 	// Main Page Слайдер Брендов
 	$('.brands__inner').slick({
 		dots: false,
 		arrows: false,
 		slidesToShow: 6,
-		swipeToSlide: true
+		swipeToSlide: true,
+		responsive: [{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 3,
+				},
+			},
+			{
+				breakpoint: 479,
+				settings: {
+					slidesToShow: 2,
+				},
+			},
+		],
 	});
 
 	//  Catalog Page выпадающие фильтры
@@ -66,7 +80,7 @@ $(function () {
 	});
 
 	// product-page ТАБЫ
-	$(".description__inner .description__btn").click(function() {
+	$(".description__inner .description__btn").click(function () {
 		$("description__inner .description__btn").removeClass("description__btn--active").eq($(this).index()).addClass("active");
 		$(".description__item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("description__item--activee");
@@ -92,6 +106,21 @@ $(function () {
 		arrows: true,
 		slidesToShow: 4
 	});
+
+	$('.burger').on('click', function () {
+		$('.menu').addClass('menu--active');
+		$('body').addClass('lock')
+	});
+
+	$('.burger-close').on('click', function () {
+		$('.menu').removeClass('menu--active');
+		$('body').removeClass('lock')
+	});
+
+	$('.header-bot__link--search').on('click', function () {
+		$('.header-bot__form').toggleClass('header-bot__form--active');
+	});
+
 
 	// Main Page для Mixitupp
 	var mixer1 = mixitup(containerEL1, config);

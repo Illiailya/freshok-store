@@ -1,18 +1,22 @@
 @import 'fonts';
 @import 'vars';
-// мексины
 @import 'libs';
 @import 'reset';
 @import 'global';
 
 .header-top {
-	padding: 14px 0;
 	background-color: $colorBg;
 	color: #fff;
+	position: relative;
 
 	&__inner {
+		padding: 14px 0;
 		display: flex;
 		justify-content: space-between;
+	}
+
+	&__menu {
+		display: flex;
 	}
 
 	&__info {
@@ -28,10 +32,6 @@
 			display: flex;
 			align-items: flex-end;
 		}
-	}
-
-	&__menu {
-		display: flex;
 	}
 
 	&__menu-item {
@@ -60,12 +60,17 @@
 
 .header-bot {
 	background-color: $colorAccent;
+	position: relative;
 
 	&__inner {
 		padding: 25px 0;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	}
+
+	&__logo-mobile {
+		display: none;
 	}
 
 	&__logo {
@@ -75,7 +80,7 @@
 	}
 
 	&__button {
-		flex: 0 1 240px;
+		flex: 0 0 240px;
 		width: 100%;
 		padding: 15px 0 15px 24px;
 		background-color: #fff;
@@ -112,11 +117,17 @@
 		}
 	}
 
+	&__form-wrapper {
+		flex: 0 1 576px;
+		width: 100%;
+		margin-right: 46px;
+	}
+
 	&__form {
 		flex: 0 1 576px;
 		width: 100%;
 		display: flex;
-		margin-right: 46px;
+
 	}
 
 	&__form-input {
@@ -151,8 +162,9 @@
 	}
 
 	&__form-btn {
-		max-width: 158px;
-		width: 100%;
+		flex: 0 1 158px;
+		// max-width: 158px;
+		// width: 100%;
 		height: 50px;
 		background-color: $colorBg;
 		font-size: 14px;
@@ -188,24 +200,31 @@
 		position: relative;
 		background-repeat: no-repeat;
 		background-position: center;
+		background-size: 64%;
 		transition: background-color 0.3s ease;
 
 		&:not(:last-child) {
 			margin-right: 12px;
 		}
 
+		&--search {
+			background-size: 24px 24px;
+			background-image: url('../images/icons/search-white.svg');
+			display: none;
+		}
+
 		&--user {
-			background-size: 32px 32px;
+			// background-size: 32px 32px;
 			background-image: url('../images/icons/user.svg');
 		}
 
 		&--heart {
-			background-size: 32px 32px;
+			// background-size: 32px 32px;
 			background-image: url('../images/icons/heart.svg');
 		}
 
 		&--cart {
-			background-size: 32px 32px;
+			// background-size: 32px 32px;
 			background-image: url('../images/icons/cart.svg');
 		}
 
@@ -213,7 +232,6 @@
 			background-color: rgb(255, 255, 255, 0.1);
 		}
 	}
-
 
 	&__link-counter {
 		position: absolute;
@@ -231,7 +249,167 @@
 		font-weight: 600;
 		color: $colorRed;
 	}
+}
 
+.menu {
+	width: 80%;
+	background-color: #fff;
+	color: #31352B;
+	border: 1px solid #EBEBEB;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -200%;
+	z-index: 55;
+	// display: none;
+	transition: all 0.4s ease;
+	overflow: auto;
+
+	&__top {
+		padding: 29px 23px 0 18px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 26px;
+
+		.burger-close {
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			@extend %bgcover;
+			background-image: url('../images/icons/burger-close.svg');
+		}
+	}
+
+	&__user {
+		color: #fff;
+		font-size: 18px;
+		line-height: 1;
+		background-color: $colorAccent;
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.icon-user {
+		margin-right: 15px;
+	}
+
+	&__login {
+		display: inline-block;
+		padding-right: 16px;
+		border-right: 1px solid #fff;
+		margin-right: 11px;
+	}
+
+	&__registration {
+		display: inline-block;
+
+	}
+
+	&__body {
+		padding: 0 15px;
+	}
+
+	&__button {
+		display: block;
+		width: 100%;
+		text-align: left;
+		padding-left: 40px;
+		position: relative;
+		height: 48px;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		margin-bottom: 24px;
+		border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 14px;
+			width: 25px;
+			height: 19px;
+			@extend %bgcontain;
+			background-image: url(../images/icons/nav_black.svg);
+		}
+	}
+
+	&--active {
+		left: 0;
+	}
+}
+
+.menu-contacts {
+	border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+
+	&__phone {
+		font-size: 18px;
+		line-height: 1;
+		display: flex;
+		align-items: center;
+		margin-bottom: 14px;
+
+		.icon-phone {
+			width: 24px;
+			height: 24px;
+			margin-right: 15px;
+		}
+	}
+
+	&__phone-text {
+		display: none;
+	}
+
+	&__adress {
+		max-width: 235px;
+		font-size: 18px;
+		line-height: 1.2;
+		display: flex;
+		align-items: center;
+		margin-bottom: 18px;
+
+		.icon-location {
+			flex-shrink: 0;
+			margin-right: 16px;
+		}
+	}
+
+	&__media {
+		display: flex;
+		padding-bottom: 24px;
+	}
+
+	&__media-item {
+		flex: 0 0 32;
+
+		&:not(:last-child) {
+			margin-right: 12px;
+		}
+	}
+
+	&__media-link {
+		display: inline-block;
+	}
+
+
+}
+
+.menu-list {
+	padding: 24px 0;
+	color: $colorBg;
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 18px;
+		}
+	}
+
+	&__link {
+		font-size: 18px;
+		line-height: 1.2;
+	}
 }
 
 .top-slider {
@@ -328,8 +506,40 @@
 			}
 		}
 	}
-}
 
+	.slick-dots {
+		justify-content: center;
+		position: absolute;
+		bottom: 16px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		visibility: hidden;
+
+		li {
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+
+		button {
+			font-size: 0;
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: #fff;
+			border: 1px solid #C1C1C1;
+			transition: all 0.3s ease;
+		}
+
+		.slick-active {
+			button {
+				background-color: $colorAccent;
+			}
+		}
+	}
+}
 
 .advantages {
 	background-color: #F6F6F6;
@@ -409,7 +619,6 @@
 		gap: 30px;
 		margin-bottom: 48px;
 	}
-
 }
 
 .card-item {
@@ -574,7 +783,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		min-height: 137px;
+		height: 137px;
 	}
 
 	&__title {
@@ -583,6 +792,7 @@
 		font-size: 14px;
 		line-height: 1.4;
 		color: $colorTitle;
+		overflow: hidden;
 	}
 
 	&__bottom {
@@ -659,7 +869,7 @@
 	}
 
 	&__item {
-		flex: 1 1 300px;
+		flex: 0 0 300px;
 		height: 300px;
 		@extend %bgcover;
 		padding-left: 32px;
@@ -941,6 +1151,23 @@
 .news {
 	margin-bottom: 72px;
 
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__top-link {
+		display: inline-block;
+		font-size: 14px;
+		line-height: 1;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $colorAccent;
+		padding-bottom: 6px;
+		border-bottom: 2px solid $colorAccent;
+	}
+
 	&__inner {
 		display: flex;
 		gap: 30px;
@@ -1214,6 +1441,4 @@
 
 @import 'catalog-page';
 @import 'product-page';
-
-
 @import 'media';

@@ -13,13 +13,151 @@
 <body>
 
 	<div class="wrapper">
-
 		<header class="header">
 			<h1 class="sr-only">Магазин свежих и топовых продуктов</h1>
 
 			<div class="header__top header-top">
+				<div class="menu">
+
+					<div class="menu__top">
+						<a class="logo" href="#">
+							<img class="logo__item" src="images/icons/logo-green.svg" style="width: 200px; height: 60px;"
+								alt="Логотип">
+						</a>
+
+						<button class="burger-close" type="button" aria-label="закрыть меню"></button>
+					</div>
+
+					<div class="menu__user">
+						<svg class="icon-user">
+							<use xlink:href="sprite.svg#user"></use>
+						</svg>
+
+						<span class="menu__login">
+							Вход
+						</span>
+
+						<span class="menu__registration">
+							Регистрация
+						</span>
+					</div>
+
+					<div class="menu__body">
+						<button class="menu__button" type="button">
+							Каталог продуктов
+						</button>
+
+						<div class="menu__contacts menu-contacts">
+							<a class="menu-contacts__phone" href="tel:+7907288365">
+								<svg class="icon-phone icon-phone--black">
+									<use xlink:href="sprite.svg#phone"></use>
+								</svg>
+								<span class="menu-contacts__phone-text">
+									Горячая линия
+								</span>
+								+7 907 288 365
+							</a>
+
+							<a class="menu-contacts__adress" href="#">
+								<svg class="icon-location">
+									<use xlink:href="sprite.svg#location"></use>
+								</svg>
+								Санкт-Петербург, ул. Ленина, 1
+							</a>
+
+							<ul class="menu-contacts__media">
+								<li class="menu-contacts__media-item">
+									<a class="menu-contacts__media-link" href="#">
+										<svg class="icon-facebook">
+											<use xlink:href="sprite.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+
+								<li class="menu-contacts__media-item">
+									<a class="menu-contacts__media-link" href="#">
+										<svg class="icon-youtube">
+											<use xlink:href="sprite.svg#youtube"></use>
+										</svg>
+									</a>
+								</li>
+
+								<li class="menu-contacts__media-item">
+									<a class="menu-contacts__media-link" href="#">
+										<svg class="icon-telegram">
+											<use xlink:href="sprite.svg#telegram"></use>
+										</svg>
+									</a>
+								</li>
+
+								<li class="menu-contacts__media-item">
+									<a class="menu-contacts__media-link" href="#">
+										<svg class="icon-instagram">
+											<use xlink:href="sprite.svg#instagram"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<ul class="menu__list menu-list">
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">
+									Доставка
+								</a>
+							</li>
+
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">
+									О нас
+								</a>
+							</li>
+
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">
+									Новости
+								</a>
+							</li>
+
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">
+									Контакты
+								</a>
+							</li>
+
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">
+									Акции
+								</a>
+							</li>
+
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">
+									Вакансии
+								</a>
+							</li>
+
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">
+									Отзывы
+								</a>
+							</li>
+
+							<li class="menu-list__item">
+								<a class="menu-list__link" href="#">
+									Публичная оферта
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
 				<div class='header-top__container main-container'>
 					<div class="header-top__inner">
+
+						<button class="burger" type="button">
+							<span class="burger__item"></span>
+						</button>
 
 						<ul class="header-top__info">
 							<li class="header-top__info-item">
@@ -27,7 +165,9 @@
 									<svg class="icon-truck">
 										<use xlink:href="sprite.svg#truck"></use>
 									</svg>
-									Адрес и время доставки
+									<span class="header-top__info-text">
+										Адрес и время доставки
+									</span>
 								</a>
 							</li>
 
@@ -36,7 +176,9 @@
 									<svg class="icon-phone">
 										<use xlink:href="sprite.svg#phone"></use>
 									</svg>
-									Горячая линия 24/7
+									<span class="header-top__info-text">
+										Горячая линия 24/7
+									</span>
 								</a>
 							</li>
 
@@ -69,6 +211,11 @@
 				<div class='header-bot__container main-container'>
 					<div class="header-bot__inner">
 
+						<a class="header-bot__logo-mobile logo-mobile" href="#">
+							<img class="logo-mobile__img" src="images/icons/logo-mobile.svg" alt="логотип-мини"
+								style="width: 37px; height: 40px;">
+						</a>
+
 						<div class="header-bot__logo">
 							<a class="logo" href="#">
 								<img class="logo__item" src="images/icons/logo.svg" style="width: 200px; height: 60px;" alt="Логотип">
@@ -79,31 +226,34 @@
 							Каталог продуктов
 						</button>
 
-						<form class="header-bot__form" action="#">
-							<input class="header-bot__form-input" type="search" placeholder="Найти в магазине ..." required>
-							<button class="header-bot__form-btn" type="submit">
-								Поиск
-							</button>
-						</form>
+						<div class="header-bot__form-wrapper">
+							<form class="header-bot__form" action="#">
+								<input class="header-bot__form-input" type="search" placeholder="Найти в магазине ..." required>
+								<button class="header-bot__form-btn" type="submit">
+									Поиск
+								</button>
+							</form>
+						</div>
 
 						<div class="header-bot__menu">
+							<button class="header-bot__link header-bot__link--search" type="button"
+								aria-label="кнопака панели поиска"></button>
+
 							<a class="header-bot__link header-bot__link--user" href="#" aria-label="иконка юзера, панель юзера"></a>
+
 							<button class="header-bot__link header-bot__link--heart" type="button"
 								aria-label="иконка сердце, избранные товары">
 								<span class="header-bot__link-counter">12</span>
 							</button>
+
 							<button class="header-bot__link header-bot__link--cart" type="button"
 								aria-label="иконка корзины, панель товаров в корзине">
 								<span class="header-bot__link-counter">12</span>
 							</button>
 						</div>
-
 					</div>
-
 				</div>
-
 			</div>
-
 		</header>
 
 		<main class="content">
@@ -212,10 +362,7 @@
 						</li>
 
 					</ul>
-
 				</div>
-
-
 			</section>
 
 			<section class="top" data-ref="container-1">
@@ -620,13 +767,12 @@
 								</a>
 							</article>
 						</li>
-						
+
 					</ul>
 
 					<button class="top__link link-more ">
 						Показать еще
 					</button>
-
 
 				</div>
 			</section>
@@ -680,7 +826,6 @@
 						</li>
 
 					</ul>
-
 				</div>
 			</section>
 
@@ -904,7 +1049,6 @@
 						Показать еще
 					</button>
 
-
 				</div>
 			</section>
 
@@ -969,12 +1113,17 @@
 
 			<section class="news">
 				<div class='news__container main-container'>
-					<h2 class="news__title title">
-						Наши новости
-					</h2>
+					<div class="news__top">
+						<h2 class="news__title title">
+							Наши новости
+						</h2>
+
+						<a class="news__top-link" href="#">
+							ВСЕ НОВОСТИ
+						</a>
+					</div>
 
 					<ul class="news__inner">
-
 						<li class="news__item">
 							<a class="news__link" href="#">
 								<div class="news__img-box" style="background-image: url('images/news/strawbery.jpg');">
@@ -1029,10 +1178,7 @@
 								</div>
 							</a>
 						</li>
-
 					</ul>
-
-
 				</div>
 			</section>
 
@@ -1122,11 +1268,13 @@
 						</li>
 
 						<li class="top-footer__item">
-
 							<div class="top-footer__contacts footer-contacts">
 
 								<a class="footer-contacts__phone" href="tel:+7907288365">
-									Горячая линия +7 907 288 365
+									<span class="footer-contacts__phone-text">
+										Горячая линия
+									</span>
+									+7 907 288 365
 								</a>
 								<a class="footer-contacts__adress" href="#">
 									Санкт-Петербург, ул. Ленина, 1
@@ -1154,7 +1302,6 @@
 									</li>
 								</ul>
 							</div>
-
 						</li>
 
 					</ul>

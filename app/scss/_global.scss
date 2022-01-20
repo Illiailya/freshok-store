@@ -14,6 +14,10 @@ body {
 	letter-spacing: 0.03em;
 }
 
+.lock {
+	overflow: hidden;
+}
+
 .main-container {
 	max-width: 1320px;
 	margin: 0 auto;
@@ -163,6 +167,42 @@ body {
 	}
 
 }
+
+
+//============================BURGER=============================
+.burger {
+	// display: block;
+	display: none;
+	width: 30px;
+	height: 20px;
+	position: relative;
+
+	&::before,
+	&::after,
+	&__item {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: #fff;
+	}
+
+	&__item {
+		display: inline-block;
+		bottom: 9px;
+	}
+
+	&::before {
+		top: 0;
+	}
+
+	&::after {
+		bottom: 0;
+
+	}
+}
+
 
 // ====================RANGE_SLIDER=====================
 .irs--flat {
@@ -318,6 +358,10 @@ body {
 	width: 22px;
 	height: 22px;
 	fill: #fff;
+
+	&--black {
+		fill: #31352B;
+	}
 }
 
 .icon-heart {
@@ -373,4 +417,47 @@ body {
 		transform: rotate(90deg);
 		fill: #505050;
 	}
+}
+
+.icon-youtube {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	fill: $colorBg;
+}
+
+
+.icon-facebook {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	fill: $colorBg;
+}
+
+.icon-telegram {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	fill: $colorBg;
+}
+
+.icon-instagram {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	fill: $colorBg;
+}
+
+.icon-location {
+	display: inline-block;
+	width: 24px;
+	height: 32px;
+	fill: $colorBg;
+}
+
+.icon-user {
+	display: inline-block;
+	width: 25px;
+	height: 32px;
+	fill: #fff;
 }
